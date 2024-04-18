@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            animation: gradientAnimation 10s linear infinite alternate;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background: linear-gradient(to right, #2563eb, #2dbaff);
+            }
+            50% {
+                background: linear-gradient(to right, #2dbaff, #34d399);
+            }
+            100% {
+                background: linear-gradient(to right, #34d399, #2563eb);
+            }
+        }
+
+        .bg-gradient-to-r {
+            background: linear-gradient(to right, #2563eb, #2dbaff);
+        }
+
+        .bg-gradient-to-r-stop1 {
+            stop-color: #2563eb;
+        }
+
+        .bg-gradient-to-r-stop2 {
+            stop-color: #2dbaff;
+        }
+
+        .bg-gradient-to-r-stop3 {
+            stop-color: #34d399;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r h-screen flex items-center justify-center">
+
+    <div class="bg-white p-8 rounded shadow-md w-full sm:w-96 text-center">
+        <h1 class="text-4xl font-bold mb-4 text-blue-500">Dashboard</h1>
+
+        <div class="mb-4">
+            <p class="text-gray-600">Selamat datang di sistem penilaian tugas siswa</p>
+        </div>
+
+        <div class="mb-4">
+            <a href="siswa.php" class="bg-blue-200 hover:bg-blue-300 text-blue-700 font-semibold py-2 px-4 rounded inline-block mb-2 w-full">Halaman Data Siswa</a>
+            <a href="penilaian.php" class="bg-blue-200 hover:bg-blue-300 text-blue-700 font-semibold py-2 px-4 rounded inline-block mb-2 w-full">Halaman Penilaian Tugas</a>
+            <a href="editadmin.php" class="bg-blue-200 hover:bg-blue-300 text-blue-700 font-semibold py-2 px-4 rounded inline-block mb-2 w-full">Edit Data User</a>
+            <a href="admin.php" class="bg-blue-200 hover:bg-blue-300 text-blue-700 font-semibold py-2 px-4 rounded inline-block mb-2 w-full">Halaman Data Admin</a>
+        </div>
+
+        <div>
+            <a href="../index.php" class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded inline-block w-full">Logout</a>
+        </div>
+    </div>
+</body>
+</html>
